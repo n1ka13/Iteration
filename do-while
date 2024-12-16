@@ -1,0 +1,14 @@
+"use strict";
+
+const sum = (...args) => {
+  let i = 0;
+  let accum = 0;
+  do {
+    accum += args[i];
+    i++;
+    if (args.length === 0) return 0;
+  } while (i < args.length);
+  return accum;
+};
+console.log(sum(1, 2, 3));
+module.exports = { sum };
